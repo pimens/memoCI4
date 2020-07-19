@@ -32,11 +32,21 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Auth::index');
+
 $routes->get('home', 'Home::index');
 $routes->Post('home', 'Home::insert');
 $routes->delete('home/(:any)', 'Home::delete/$1');
-// $routes->put('home/(:any)', 'Home::edit/$1');
+// $routes->delete('home/memoDelete/(:any)', 'Home::memoDelete/$1');
+
+$routes->put('home/(:any)', 'Home::edit/$1');
+$routes->get('home/detail/(:any)/', 'Home::tabelMemo/$1/');
+$routes->get('home/detailBrg/(:any)/', 'Home::tabelBarang/$1/');
 $routes->post('home/actionEdit/(:any)', 'Home::actionEdit/$1');
+
+$routes->get('sp/detail/(:any)/', 'sp::tabelMemo/$1/');
+$routes->get('sp/detailBrg/(:any)/', 'sp::tabelBarang/$1/');
+
+
 
 
 

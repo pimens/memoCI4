@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Controllers;
 
 /**
@@ -42,5 +43,14 @@ class BaseController extends Controller
 		// E.g.:
 		// $this->session = \Config\Services::session();
 	}
+	// {
+	// 	$model = new UserModel();
+	// 	$user = $model->getNews();
+	// 	dd($user);
+	// 	$nomor = $this->request->getVar('nomor');
+	// 	$file = $this->request->getFile('file');
+	// 	echo $file->getName();
+	// 	$file->move('data/');
+	// }
 
 }

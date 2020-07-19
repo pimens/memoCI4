@@ -4,7 +4,7 @@
         <div class="header3-wrap">
             <div class="header__logo">
                 <a href="#">
-                    <img height='50' width='50' src="assets/images/logo.jpg" alt="John Doe" />
+                    <img height='50' width='50' src="<?php echo base_url(); ?>/assets/images/logo.jpg" alt="John Doe" />
                 </a>
             </div>
             <div class="header__navbar">
@@ -30,7 +30,7 @@
                 <div class="account-wrap">
                     <div class="account-item account-item--style2 clearfix js-item-menu">
                         <div class="image">
-                            <img src="assets/images/logo.jpg" alt="John Doe" />
+                            <img src="<?php echo base_url(); ?>/assets/images/logo.jpg" alt="John Doe" />
                         </div>
                         <div class="content">
                             <a class="js-acc-btn" href="#"> john doe</a>
@@ -39,7 +39,7 @@
                             <div class="info clearfix">
                                 <div class="image">
                                     <a href="#">
-                                        <img src="assets/images/logo.jpg" alt="John Doe" />
+                                        <img src="<?php echo base_url(); ?>/assets/images/logo.jpg" alt="John Doe" />
                                     </a>
                                 </div>
                                 <div class="content">
@@ -68,7 +68,7 @@
         <div class="container-fluid">
             <div class="header-mobile-inner">
                 <a class="logo" href="index.html">
-                    <img height='50' width='50' src="assets/images/logo.jpg" alt="John Doe" />
+                    <img height='50' width='50' src="<?php echo base_url(); ?>/assets/images/logo.jpg" alt="John Doe" />
 
                 </a>
                 <button class="hamburger hamburger--slider" type="button">
@@ -107,7 +107,7 @@
         <div class="account-wrap">
             <div class="account-item account-item--style2 clearfix js-item-menu">
                 <div class="image">
-                    <img src="assets/images/icon/avatar-01.jpg" alt="John Doe" />
+                    <img src="<?php echo base_url(); ?>/assets/images/icon/avatar-01.jpg" alt="John Doe" />
 
                 </div>
                 <div class="content">
@@ -117,7 +117,7 @@
                     <div class="info clearfix">
                         <div class="image">
                             <a href="#">
-                                <img src="assets/images/icon/avatar-01.jpg" alt="John Doe" />
+                                <img src="<?php echo base_url(); ?>/assets/images/icon/avatar-01.jpg" alt="John Doe" />
                             </a>
                         </div>
                         <div class="content">
@@ -128,7 +128,7 @@
                         </div>
                     </div>
                     <div class="account-dropdown__footer">
-                        <a href="/logout">
+                        <a href="/auth/logout">
                             <i class="zmdi zmdi-power"></i>Logout</a>
                     </div>
                 </div>
