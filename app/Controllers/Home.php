@@ -54,6 +54,33 @@ class Home extends BaseController
 		$builder->delete();
 		echo json_encode(array("status" => TRUE));
 	}
+	public function edit($id)
+	{
+		$builder = $this->db->table('permohonan');
+		$builder->where('id', $id);
+		$permohonan = $builder->get()->getRowArray();
+		echo json_encode($permohonan);
+	}
+	public function actionEdit($id)
+	{
+		// // echo $id . $this->request->getVar('nomor');
+		// $data = $this->request->getRawInput();
+		// echo $data
+		$builder = $this->db->table('permohonan');
+		$newdata = [
+			'nomor'  => $this->request->getVar('nomor'),
+			'tanggal'  => $this->request->getVar('tanggal'),
+			'kepada'  => $this->request->getVar('kepada'),
+			'direktur'  => $this->request->getVar('direktur'),
+			'hal'  => $this->request->getVar('hal'),
+			'deskripsi'  => $this->request->getVar('deskripsi'),
+			'jenis'  => $this->request->getVar('jenis'),
+			'jenis'  => $this->request->getVar('jenis'),
+			'dari'  => $this->session->get('id'),
+		];
+		$builder->where('id', $id);
+		$builder->update($newdata);
+	}
 	public function tes()
 	{
 		$model = new UserModel();

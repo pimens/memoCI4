@@ -35,6 +35,9 @@ $routes->get('/', 'Auth::index');
 $routes->get('home', 'Home::index');
 $routes->Post('home', 'Home::insert');
 $routes->delete('home/(:any)', 'Home::delete/$1');
+// $routes->put('home/(:any)', 'Home::edit/$1');
+$routes->post('home/actionEdit/(:any)', 'Home::actionEdit/$1');
+
 
 
 

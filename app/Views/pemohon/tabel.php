@@ -1,4 +1,4 @@
-<table id="example3" class="table table-borderless table-striped table-earning">
+<table id="tabelMemo" class="table table-borderless table-striped table-earning">
     <thead>
         <tr>
             <th>--</th>
@@ -32,12 +32,12 @@
                 <td>$c->hal</td>		
                 <td>$c->deskripsi</td>		
                 <td>";
-            echo "<a class='btn btn-info btn-sm' href='ad/barang/$c->id'>+</a>";
-            echo "<a class='btn btn-info btn-sm' href='ad/pdf/$c->id'>PDF</a>";
+            echo "<a class='btn btn-info btn-sm' href='ad/barang/$c->id'> <i class='fa fa-plus-square'></i></a>";
+            echo "<a class='btn btn-warning btn-sm' href='ad/pdf/$c->id'> <i class='fa fa-clipboard'></i></a>";
 
             if ($c->status == 0) {
-                echo "<a class='btn btn-primary btn-sm' href='ad/editPermohonan/$c->id'>Edit</a>";
-                echo "<button class='btn btn-danger btn-sm' onclick='hapus($c->id)'>Hapus</button>";
+                echo "<button class='btn btn-primary btn-sm' onclick='getDetail($c->id)'> <i class='fa fa-pencil'></i></button>";
+                echo "<button class='btn btn-danger btn-sm' onclick='hapus($c->id)'> <i class='fa fa-trash'></i></button>";
             }
             echo "</td</tr>";
         }
