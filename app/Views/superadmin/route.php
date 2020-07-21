@@ -4,17 +4,17 @@ if (!session()->has('id')) {
     window.location = "/";
     </script>'; //langsung /auth/red ==== //   auth/red jadi auth/auth/red
 } else {
-    if (session()->get('level') == 1) {
+    if (session()->get('level') == 2) {
         echo '<script>
-        window.location = "/Home";
+        window.location = "/Sp";
         </script>';
     } else if (session()->get('level') == 3) {
         echo '<script>
         window.location = "/direksi";
         </script>';
-    } else if (session()->get('level') == 0) {
+    } else if (session()->get('level') == 1) {
         echo '<script>
-        window.location = "/super";
+        window.location = "/Home";
         </script>';
     }
 }

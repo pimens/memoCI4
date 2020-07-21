@@ -46,6 +46,10 @@ $routes->post('home/actionEdit/(:any)', 'Home::actionEdit/$1');
 $routes->get('sp/detail/(:any)/', 'sp::tabelMemo/$1/');
 $routes->get('sp/detailBrg/(:any)/', 'sp::tabelBarang/$1/');
 
+$routes->get('direksi/detail/(:any)/', 'direksi::tabelMemo/$1/');
+$routes->get('direksi/detailBrg/(:any)/', 'direksi::tabelBarang/$1/');
+$routes->delete('super/(:any)', 'Super::deleteUser/$1');
+
 
 
 

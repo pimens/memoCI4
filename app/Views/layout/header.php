@@ -7,25 +7,6 @@
                     <img height='50' width='50' src="<?php echo base_url(); ?>/assets/images/logo.jpg" alt="John Doe" />
                 </a>
             </div>
-            <div class="header__navbar">
-                <ul class="list-unstyled">
-                    <li>
-                        <a href="/makanan">
-                            <i class="fas fa-trophy"></i>
-                            <span class="bot-line"></span>Beranda</a>
-                    </li>
-                    <li>
-                        <a href="/cabang">
-                            <i class="fas fa-shopping-basket"></i>
-                            <span class="bot-line"></span>Cabang</a>
-                    </li>
-                    <li>
-                        <a href="/promo">
-                            <i class="fas fa-shopping-basket"></i>
-                            <span class="bot-line"></span>Promo</a>
-                    </li>
-                </ul>
-            </div>
             <div class="header__tool">
                 <div class="account-wrap">
                     <div class="account-item account-item--style2 clearfix js-item-menu">
@@ -33,7 +14,7 @@
                             <img src="<?php echo base_url(); ?>/assets/images/logo.jpg" alt="John Doe" />
                         </div>
                         <div class="content">
-                            <a class="js-acc-btn" href="#"> john doe</a>
+                            <a class="js-acc-btn" href="#"> <?php echo session()->get('username') ?></a>
                         </div>
                         <div class="account-dropdown js-dropdown">
                             <div class="info clearfix">
@@ -44,9 +25,9 @@
                                 </div>
                                 <div class="content">
                                     <h5 class="name">
-                                        <a href="#">Admin Kimochi</a>
+                                        <a href="/user"><?php echo session()->get('username') ?></a>
                                     </h5>
-                                    <span class="email">admin@gmail.com</span>
+                                    <span class="email"><?php echo session()->get('email') ?></span>
                                 </div>
                             </div>
                             <div class="account-dropdown__footer">
@@ -79,22 +60,6 @@
             </div>
         </div>
     </div>
-    <nav class="navbar-mobile">
-        <div class="container-fluid">
-            <ul class="navbar-mobile__list list-unstyled">
-                <li>
-                    <a href="#">
-                        <i class="fas fa-shopping-basket"></i>
-                        <span class="bot-line"></span>eCommerce</a>
-                </li>
-                <li>
-                    <a href="table.html">
-                        <i class="fas fa-trophy"></i>
-                        <span class="bot-line"></span>Features</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
 </header>
 <div class="sub-header-mobile-2 d-block d-lg-none">
     <div class="header__tool">
@@ -111,7 +76,7 @@
 
                 </div>
                 <div class="content">
-                    <a class="js-acc-btn" href="#">AdminKimochi</a>
+                    <a class="js-acc-btn" href="#"><?php echo session()->get('username') ?></a>
                 </div>
                 <div class="account-dropdown js-dropdown">
                     <div class="info clearfix">
@@ -122,9 +87,9 @@
                         </div>
                         <div class="content">
                             <h5 class="name">
-                                <a href="#">AdminKimochi</a>
+                                <a href="/user"><?php echo session()->get('username') ?></a>
                             </h5>
-                            <span class="email">admin@gmail.com</span>
+                            <span class="email"><?php echo session()->get('email') ?></span>
                         </div>
                     </div>
                     <div class="account-dropdown__footer">

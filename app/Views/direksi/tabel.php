@@ -35,13 +35,15 @@
                 <td>$c->deskripsi</td>		
                 <td>";
                 if ($c->jenis == 0) {
-                    echo "<a class='btn btn-info btn-sm' href='/sp/detail/$c->id/'> <i class='fa fa-eye'></i></a>";
+                    echo "<a class='btn btn-info btn-sm' href='/direksi/detail/$c->id/'> <i class='fa fa-eye'></i></a>";
                     echo "<a class='btn btn-warning btn-sm' href='direksi/viewMemo/$c->id'> <i class='fa fa-clipboard'></i></a>";
                 } else {
-                    echo "<a class='btn btn-info btn-sm' href='/sp/detailBrg/$c->id/'> <i class='fa fa-eye'></i></a>";
+                    echo "<a class='btn btn-info btn-sm' href='/direksi/detailBrg/$c->id/'> <i class='fa fa-eye'></i></a>";
                     echo "<a class='btn btn-warning btn-sm' href='direksi/viewBarang/$c->id'> <i class='fa fa-clipboard'></i></a>";
                 }
-                if ($c->status == 1 || $c->status == 3) {
+
+                echo "<a class='btn btn-warning btn-sm' href='direksi/viewBarang/$c->id'> <i class='fa fa-clipboard'></i></a>";
+                if ($c->status == 2 || $c->status == 33) {
                     echo "<button class='btn btn-primary btn-sm' onclick='setStatus($c->id)' >Reset</button>";
                 }
                 echo "</td></tr>";

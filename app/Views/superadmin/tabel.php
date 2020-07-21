@@ -1,9 +1,11 @@
-<table id="tabelMemo" class="table table-borderless table-striped table-earning">
+<table id="tabelMemo" class="table table-striped table-bordered table-earning">
     <thead>
         <tr>
+            <th>Jenis</th>
             <th>--</th>
             <th>Nomor</th>
-            <th>Kepada</th>
+            <th>Dari</th>
+            <th>Approval 1</th>
             <th>Direktur</th>
             <th>Tanggal</th>
             <th>Perihal</th>
@@ -12,8 +14,14 @@
         </tr>
     </thead>
     <tbody>
-        <?php foreach ($brg as $c) {
+        <?php
+        foreach ($permohonan as $c) {
             echo "<tr>";
+            if ($c->jenis == 0) {
+                echo "<td>Memo</td>";
+            } else {
+                echo "<td>Barang</td>";
+            }
             if ($c->status == 0) {
                 echo "<td><p> <span class='badge badge-info'>Pending</span></p></td>";
             } else if ($c->status == 1) {
@@ -26,25 +34,33 @@
                 echo "<td><p> <span class='badge badge-danger'>Rejected XX</span></p>$c->komentar</td>";
             }
             echo "<td>$c->nomor</td>										
-                <td>$c->kepada</td>	
-                <td>$c->direktur</td>			                                            		
-                <td>$c->tanggal</td>		
-                <td>$c->hal</td>		
-                <td>$c->deskripsi</td>		
-                <td>";
+            <td>$c->dari</td>		
+            <td>$c->kepada</td>		
+            <td>$c->direktur</td>			
+            <td>$c->tanggal</td>		
+            <td>$c->hal</td>		
+            <td>$c->deskripsi</td><td>";
             if ($c->jenis == 0) {
-                echo "<a class='btn btn-info btn-sm' href='/home/detail/$c->id/'> <i class='fa fa-plus-square'></i></a>";
                 echo "<a class='btn btn-warning btn-sm' href='direksi/viewMemo/$c->id'> <i class='fa fa-clipboard'></i></a>";
             } else {
-                echo "<a class='btn btn-info btn-sm' href='/home/detailBrg/$c->id/'> <i class='fa fa-plus-square'></i></a>";
                 echo "<a class='btn btn-warning btn-sm' href='direksi/viewBarang/$c->id'> <i class='fa fa-clipboard'></i></a>";
             }
-            if ($c->status == 0) {
-                echo "<button class='btn btn-primary btn-sm' onclick='getDetail($c->id)'> <i class='fa fa-pencil'></i></button>";
-                echo "<button class='btn btn-danger btn-sm' onclick='hapus($c->id)'> <i class='fa fa-trash'></i></button>";
-            }
-            echo "</td</tr>";
+            echo "</td></tr>";
         }
         ?>
     </tbody>
+    <tfoot>
+        <tr>
+            <th>Jenis</th>
+            <th>--</th>
+            <th>Nomor</th>
+            <th>Dari</th>
+            <th>Approval 1</th>
+            <th>Direktur</th>
+            <th>Tanggal</th>
+            <th>Perihal</th>
+            <th>Deskripsi</th>
+            <th>Action</th>
+        </tr>
+    </tfoot>
 </table>

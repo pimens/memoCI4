@@ -10,11 +10,11 @@ if (!session()->has('id')) {
         </script>';
     } else if (session()->get('level') == 3) {
         echo '<script>
-        window.location = "/";
+        window.location = "/direksi";
         </script>';
-    } else if (session()->get('level') == 4) {
+    } else if (session()->get('level') == 0) {
         echo '<script>
-        window.location = "/";
+        window.location = "/super";
         </script>';
     }
 }

@@ -32,6 +32,7 @@ class Auth extends BaseController
         } else {
             $ses = [
                 'username'  => $query['nama'],
+                'email'  => $query['email'],
                 'id'  => $query['id'],
                 'level'     => $query['level'],
                 'login' => TRUE
