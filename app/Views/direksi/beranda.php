@@ -12,7 +12,6 @@ Beranda Direksi
                 <strong class="card-title">Daftar Permohonan</strong>
             </div>
             <div class="card-body">
-                <button id="addButton" class="btn btn-primary btn-md"><i class="fa fa-plus-square"></i> Add</button>
                 <div class="rs-select2--dark rs-select2--md m-r-10">
                     <select class="js-select2" id="jns">
                         <option value="0">Memo</option>

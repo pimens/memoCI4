@@ -43,9 +43,9 @@ Detail
                 echo "Status :";
                 if ($permohonan->status == 0) {
                     echo " <span class='badge badge-info'>Pending</span><br>";
-                    echo "<button id='addButton' type='button' class='btn btn-sm btn-warning'><span class='fa fa-plus'></span>Reject/Approve</button>";
                 } else if ($permohonan->status == 1) {
                     echo " <span class='badge badge-warning'>Approve X</span>";
+                    echo "<button id='addButton' type='button' class='btn btn-sm btn-warning'><span class='fa fa-plus'></span>Reject/Approve</button>";
                 } else if ($permohonan->status == 2) {
                     echo " <span class='badge badge-primary'>Approve XX</span>";
                 } else if ($permohonan->status == 3) {

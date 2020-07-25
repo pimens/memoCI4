@@ -1,18 +1,18 @@
- <table id="tabelMemo" class="table table-striped table-earning">
-     <thead>
-         <tr>
-             <th>--</th>
-             <th>Nomor</th>
-             <th>Dari</th>
-             <th>Direktur</th>
-             <th>Tanggal</th>
-             <th>Perihal</th>
-             <th>Deskripsi</th>
-             <th>Action</th>
-         </tr>
-     </thead>
-     <tbody>
-         <?php
+   <table id="tabelMemo" class="table table-striped table-earning">
+       <thead>
+           <tr>
+               <th>--</th>
+               <th>Nomor</th>
+               <th>Dari</th>
+               <th>Direktur</th>
+               <th>Tanggal</th>
+               <th>Perihal</th>
+               <th>Deskripsi</th>
+               <th>Action</th>
+           </tr>
+       </thead>
+       <tbody>
+           <?php
             $u = base_url();
             foreach ($permohonan as $c) {
                 echo "<tr>";
@@ -42,24 +42,33 @@
                     echo "<a class='btn btn-warning btn-sm' href='direksi/viewBarang/$c->id'> <i class='fa fa-clipboard'></i></a>";
                 }
 
-                echo "<a class='btn btn-warning btn-sm' href='direksi/viewBarang/$c->id'> <i class='fa fa-clipboard'></i></a>";
+                // echo "<a class='btn btn-warning btn-sm' href='direksi/viewBarang/$c->id'> <i class='fa fa-clipboard'></i></a>";
                 if ($c->status == 2 || $c->status == 33) {
                     echo "<button class='btn btn-primary btn-sm' onclick='setStatus($c->id)' >Reset</button>";
                 }
                 echo "</td></tr>";
             }
             ?>
-     </tbody>
-     <tfoot>
-         <tr>
-             <th>--</th>
-             <th>Nomor</th>
-             <th>Dari</th>
-             <th>Direktur</th>
-             <th>Tanggal</th>
-             <th>Perihal</th>
-             <th>Deskripsi</th>
-             <th>Action</th>
-         </tr>
-     </tfoot>
- </table>
+       </tbody>
+       <tfoot>
+           <tr>
+               <th>--</th>
+               <th>Nomor</th>
+               <th>Dari</th>
+               <th>Direktur</th>
+               <th>Tanggal</th>
+               <th>Perihal</th>
+               <th>Deskripsi</th>
+               <th>Action</th>
+           </tr>
+       </tfoot>
+   </table>
+
+
+
+
+   <script type="text/javascript">
+       $(document).ready(function() {
+           $('#tabelMemo').DataTable();
+       });
+   </script>
